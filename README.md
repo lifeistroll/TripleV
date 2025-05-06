@@ -1,18 +1,55 @@
-## Getting Started
+## i just made this out of boredom 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# File Encryption Tool
 
-## Folder Structure
+A simple Java-based tool for encrypting and decrypting files using AES encryption.
 
-The workspace contains two folders by default, where:
+## Features
+- Encrypt files with AES algorithm
+- Decrypt files using a generated key
+- Simple folder-based workflow
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Prerequisites
+- Java Runtime Environment (JRE) 8 or later
+- Basic understanding of file encryption concepts
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Installation
+1. Clone or download this repository
+2. Ensure you have Java installed
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Usage
 
-## Dependency Management
+### Encryption
+1. Create two folders in the `src` directory:
+   - `key` (for storing encryption keys)
+   - `files` (for files to encrypt/decrypt)
+2. Place files you want to encrypt in the `files` folder
+3. Run `vvv1.java`
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+The tool will:
+- Generate an encryption key (saved in `key/thekey.key`)
+- Encrypt all files in the `files` folder
+- Create encrypted versions with `.encrypted` extension
+
+### Decryption
+1. Move `thekey.key` from the `key` folder to the `files` folder
+2. Place encrypted files (`.encrypted` extension) in the `files` folder
+3. Run `rev_vvv1.java`
+
+The tool will:
+- Use the key to decrypt the files
+- Save decrypted versions without the `.encrypted` extension
+
+## Security Notes
+- Always keep your `thekey.key` file secure - anyone with this file can decrypt your files
+- The original key will remain in the `key` folder after encryption - consider deleting it if not needed
+- For maximum security, store keys separately from encrypted files
+
+## License
+[Specify your license here, e.g., MIT, GPL, or proprietary]
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.
+
+## Disclaimer
+This tool is provided as-is. The author is not responsible for any data loss or security breaches resulting from its use.
