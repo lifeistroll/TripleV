@@ -9,13 +9,13 @@ import java.util.Arrays;
 public class rev_vvv1 {
 
     public static void main(String[] args) {
-        String folderPath = "C:\\Code\\JAVA\\vvv1\\src\\files";
-        String keyFilePath = folderPath + "\\thekey.key";
+        Path folderPath = Paths.get("src", "files");
+        Path keyFilePath = folderPath.resolve("thekey.key");
 
         try {
-            String key = new String(Files.readAllBytes(Paths.get(keyFilePath))).trim();
+            String key = Files.readString(keyFilePath).trim();
 
-            File folder = new File(folderPath);
+            File folder = folderPath.toFile();
             File[] listOfFiles = folder.listFiles();
 
             for (File file : listOfFiles) {
