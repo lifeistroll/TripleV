@@ -40,6 +40,16 @@ The tool will:
 - Use the key to decrypt the files
 - Save decrypted versions without the `.enc` extension
 
+## One-Click Execution
+
+### Windows Users:
+1. Double-click:
+   - `encrypt.bat` to encrypt files
+   - `decrypt.bat` to decrypt files
+
+### macOS/Linux Users:
+I am bored so another time maybe
+
 ## Security Notes
 - Always keep your `thekey.key` file secure - anyone with this file can decrypt your files
 - The original key will remain in the `key` folder after encryption - consider deleting it if not needed
