@@ -1,4 +1,4 @@
-## i just made this out of boredom 
+# i made this out of boredom 
 
 # File Encryption Tool
 
@@ -44,9 +44,6 @@ The tool will:
 - Always keep your `thekey.key` file secure - anyone with this file can decrypt your files
 - The original key will remain in the `key` folder after encryption - consider deleting it if not needed
 - For maximum security, store keys separately from encrypted files
-
-## License
-[Specify your license here, e.g., MIT, GPL, or proprietary]
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.
