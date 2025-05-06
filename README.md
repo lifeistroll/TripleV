@@ -29,7 +29,7 @@ A simple Java-based tool for encrypting and decrypting files using AES encryptio
 The tool will:
 - Generate an encryption key (saved in `key/thekey.key`)
 - Encrypt all files in the `files` folder
-- Create encrypted versions with `.encrypted` extension
+- Create encrypted versions with `.enc` extension
 
 ### Decryption
 1. Move `thekey.key` from the `key` folder to the `files` folder
