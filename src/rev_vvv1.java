@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class rev_vvv1 {
 
     public static void main(String[] args) {
-        Path folderPath = Paths.get("src", "files");
+        Path folderPath = Paths.get("files");
         Path keyFilePath = folderPath.resolve("thekey.key");
 
         try {

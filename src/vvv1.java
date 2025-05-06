@@ -9,8 +9,8 @@ import java.util.Arrays;
 public class vvv1 {
 
     public static void main(String[] args) {
-        Path folderPath = Paths.get("src", "files");
-        Path keyFilePath = Paths.get("thekey.key");
+        Path folderPath = Paths.get("files");
+        Path keyFilePath = Paths.get("key", "thekey.key");
 
         String key = makeKey(keyFilePath.toString(), 32);
 
@@ -48,7 +48,7 @@ public class vvv1 {
             writer.write(key.toString());
             System.out.println("Key saved to: " + filePath);
         } catch (IOException e) {
-            System.out.println("Failed to write key");
+            System.out.println("Failed to write key, " + e.getMessage());
         }
 
         return key.toString();
