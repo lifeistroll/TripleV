@@ -33,12 +33,12 @@ The tool will:
 
 ### Decryption
 1. Move `thekey.key` from the `key` folder to the `files` folder
-2. Place encrypted files (`.encrypted` extension) in the `files` folder
+2. Place encrypted files (`.enc` extension) in the `files` folder
 3. Run `rev_vvv1.java`
 
 The tool will:
 - Use the key to decrypt the files
-- Save decrypted versions without the `.encrypted` extension
+- Save decrypted versions without the `.enc` extension
 
 ## Security Notes
 - Always keep your `thekey.key` file secure - anyone with this file can decrypt your files
