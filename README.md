@@ -1,4 +1,4 @@
-# i made this out of boredom 
+i made this out of boredom 
 
 # File Encryption Tool
 
